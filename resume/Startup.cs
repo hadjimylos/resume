@@ -33,11 +33,6 @@ namespace NetCoreTemplate
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-			string dbCon = $"{Config.AppSettings["ConnectionStrings:DefaultConnection"]}";
-
-			services.AddDbContext<Db>(options =>
-				options.UseSqlServer(dbCon));
-
 			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
