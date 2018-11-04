@@ -1,0 +1,138 @@
+﻿.job-component {
+    display: inline-block;
+    position: relative;
+    width: 19%;
+    text-align: center;
+    vertical-align: top;
+
+    > *:not(:last-child) {
+        margin-bottom: 15px;
+    }
+
+    .job-logo {
+        img {
+            width: 120px;
+
+
+            &.lrg-size {
+                width: 150px;
+            }
+
+            &.small-size {
+                width: 100px;
+            }
+        }
+    }
+    // extending this makes vertical line longer
+    @line-length: 400px;
+
+    .get-line-height(@small-height, @count-job-items) {
+        @line-height: @line-length - @small-height - (15px * 2) - ((@count-job-items - 1) * 20px) - 14px;
+    }
+
+    &.first {
+        .vertical-line.small {
+            height: 5px;
+        }
+
+        .vertical-line.large {
+            .get-line-height(5px, 2);
+            height: @line-height;
+        }
+    }
+
+    &.second {
+        .vertical-line.small {
+            height: 25px;
+        }
+
+        .vertical-line.large {
+            .get-line-height(25px, 3);
+            height: @line-height;
+        }
+    }
+
+    &.third {
+        .vertical-line.small {
+            height: 45px;
+        }
+
+        .vertical-line.large {
+            .get-line-height(45px, 3);
+            height: @line-height;
+        }
+    }
+
+    &.fourth {
+        .vertical-line.small {
+            height: 65px;
+        }
+
+        .vertical-line.large {
+            .get-line-height(65px, 7);
+            height: @line-height;
+        }
+    }
+
+    &.fifth {
+        .vertical-line.small {
+            height: 175px;
+        }
+
+        .vertical-line.large {
+            .get-line-height(175px, 5);
+            height: @line-height;
+        }
+    }
+
+    .vertical-line {
+        // display left border
+        border-left: 1px solid @grey;
+        // center vertical line
+        margin-left: 50%;
+    }
+
+    .inline-child-divs() {
+        > div {
+            display: inline-block;
+        }
+    }
+
+    .job-items {
+        color: @red;
+        font-size: 12px;
+
+        > *:not(:last-child) {
+            padding-bottom: 6px;
+            box-sizing: border-box;
+        }
+
+        .by-three {
+            .inline-child-divs();
+
+            > div:not(:last-child) {
+                margin-right: 20px;
+            }
+        }
+
+        .by-two {
+            .inline-child-divs();
+
+            > div:not(:last-child) {
+                margin-right: 30px;
+            }
+        }
+
+        .by-one {
+            text-align: center;
+        }
+    }
+
+    .job-position {
+        margin-bottom: 5px;
+    }
+
+    .job-duration {
+        color: @blue;
+    }
+}

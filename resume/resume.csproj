@@ -20,5 +20,6 @@
     <Folder Include="front_end\css\includes\components\" />
     <Folder Include="front_end\images\sprite%402\" />
     <Folder Include="wwwroot\" />
+    <Folder Include="Views\Shared\Layouts\" />
   </ItemGroup>
 </Project>

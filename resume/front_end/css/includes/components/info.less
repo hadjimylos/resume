@@ -1,0 +1,35 @@
+﻿.info-component {
+    .info-field:not(:last-child) {
+        padding-bottom:4px;
+        box-sizing: border-box;
+    }
+
+    &.wider-label {
+        .info-field {
+            label {
+                width: 100px;
+            }
+        }
+    }
+
+    .info-title {
+        color: @red;
+        font-size: 18px;
+        padding-bottom: 10px;
+        box-sizing: border-box;
+    }
+
+    .info-field {
+        label {
+            width: 50px;
+        }
+
+        * {
+            display: inline-block;
+        }
+
+        .data {
+            color: @blue;
+        }
+    }
+}

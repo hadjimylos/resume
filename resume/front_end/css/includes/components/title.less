@@ -1,0 +1,27 @@
+﻿.title-component {
+    /* cannot use flexbox because of wkhtmltopdf */
+    > * {
+        display: inline-block;
+    }
+
+    > :first-child {
+        width: 63%;
+    }
+
+    > :last-child {
+        width:35%;
+    }
+
+    .title-section {
+        &.inline {
+
+            > * {
+                display: inline-block;
+            }
+
+            & > div:not(:first-child) {
+                margin-left: 50px;
+            }
+        }
+    }
+}
