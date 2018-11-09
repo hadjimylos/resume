@@ -15,11 +15,15 @@
     <Content Remove="wwwroot\images\banner1.svg" />
     <Content Remove="wwwroot\images\banner2.svg" />
     <Content Remove="wwwroot\images\banner3.svg" />
+    <Content Remove="wwwroot\images\uni-icon.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="front_end\css\includes\components\" />
     <Folder Include="front_end\images\sprite%402\" />
     <Folder Include="wwwroot\" />
     <Folder Include="Views\Shared\Layouts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\images\uni-icon.png" />
   </ItemGroup>
 </Project>
