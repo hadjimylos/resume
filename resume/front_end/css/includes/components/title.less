@@ -1,27 +1,17 @@
 ﻿.title-component {
-    /* cannot use flexbox because of wkhtmltopdf */
-    > * {
-        display: inline-block;
-    }
 
-    > :first-child {
-        width: 63%;
-    }
+    // this is the flavor of flexbox we can use with wkhtmltopdf
+    display: -webkit-box;
+    -webkit-box-pack: justify;
 
     > :last-child {
-        width:35%;
+        width: 56%;
     }
 
     .title-section {
         &.inline {
-
-            > * {
-                display: inline-block;
-            }
-
-            & > div:not(:first-child) {
-                margin-left: 50px;
-            }
+            display: -webkit-box;
+            -webkit-box-pack: justify;
         }
     }
 }
