@@ -1,0 +1,23 @@
+﻿.summary-component {
+
+    .technologies {
+        margin-left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        color: @red;
+
+        > * {
+            display: inline-block;
+            font-size: 25px;
+        }
+
+        > :not(:first-child) {
+            padding-left: 25px;
+        }
+    }
+
+    .summary {
+        font-size: 15px;
+        text-align: center;
+    }
+}
